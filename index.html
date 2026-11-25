@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord — Sabri Taoufik</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <div class="layout">
+    <!-- Barre latérale fixe à gauche -->
+    <aside class="sidebar">
+      <img src="istockphoto-1093110112-612x612.jpg" alt="Portrait ou illustration de Sabri Taoufik" class="avatar">
+      <h1>SABRI TAOUFIK</h1>
+      <p class="role">Développement Web &amp; Systèmes</p>
+
+      <nav class="menu-lateral">
+        <a href="#profil">Présentation</a>
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button type="button" id="toggle-theme" class="btn-theme">Mode Sombre</button>
+      <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer" class="btn-lien">Wikipédia</a>
+    </aside>
+
+    <!-- Zone principale qui défile à droite -->
+    <main class="contenu-principal">
+
+      <!-- Présentation -->
+      <section id="profil" class="carte">
+        <h2>Bonjour tout le monde</h2>
+        <p>Bienvenue sur mon espace personnel créé avec HTML5, CSS3 et JavaScript dans Visual Studio Code.</p>
+        <div class="badges">
+          <span>HTML &amp; CSS</span>
+          <span>Bases de données</span>
+          <span>Réseaux &amp; Outils</span>
+        </div>
+      </section>
+
+      <!-- Galerie de 3 cartes projets -->
+      <section id="projets" class="carte">
+        <h2>Mes projets &amp; réalisations</h2>
+        <div class="grille-projets">
+          <article class="projet-card">
+            <h3>Site vitrine HTML/CSS</h3>
+            <p>Mise en page responsive, cartes, grilles et thèmes personnalisés.</p>
+            <div class="barre-fond"><div class="barre-remplie" style="width: 75%;"></div></div>
+            <span class="pourcentage">75%</span>
+          </article>
+
+          <article class="projet-card">
+            <h3>Bases de données &amp; SQL</h3>
+            <p>Modélisation, requêtes SQL et administration d'environnements locaux.</p>
+            <div class="barre-fond"><div class="barre-remplie" style="width: 85%;"></div></div>
+            <span class="pourcentage">85%</span>
+          </article>
+
+          <article class="projet-card">
+            <h3>Réseaux &amp; Systèmes</h3>
+            <p>Adressage, routage, tests de connectivité et outils bureautiques.</p>
+            <div class="barre-fond"><div class="barre-remplie" style="width: 70%;"></div></div>
+            <span class="pourcentage">70%</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Tableau filtrable -->
+      <section id="competences" class="carte">
+        <div class="entete-section">
+          <h2>Compétences &amp; progression</h2>
+          <div class="filtres">
+            <button type="button" class="filtre-btn actif" data-filtre="tous">Tous</button>
+            <button type="button" class="filtre-btn" data-filtre="Acquis">Acquis</button>
+            <button type="button" class="filtre-btn" data-filtre="En progression">En progression</button>
+          </div>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Domaine</th>
+              <th>Usage principal</th>
+              <th>Statut</th>
+            </tr>
+          </thead>
+          <tbody id="table-competences">
+            <tr data-statut="En progression">
+              <td>HTML5 &amp; CSS3</td>
+              <td>Structure et style des pages</td>
+              <td>En progression</td>
+            </tr>
+            <tr data-statut="Acquis">
+              <td>SQL / Bases de données</td>
+              <td>Requêtes et gestion de données</td>
+              <td>Acquis</td>
+            </tr>
+            <tr data-statut="En progression">
+              <td>JavaScript</td>
+              <td>Interactions dynamiques</td>
+              <td>En progression</td>
+            </tr>
+            <tr data-statut="Acquis">
+              <td>Réseaux &amp; Bureautique</td>
+              <td>Configuration et organisation</td>
+              <td>Acquis</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Formulaire de contact interactif -->
+      <section id="contact" class="carte">
+        <h2>Me contacter</h2>
+        <form id="form-contact" class="formulaire">
+          <label for="nom">Votre nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+
+          <label for="email">Votre email</label>
+          <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
+
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Écrivez votre message..." required></textarea>
+
+          <button type="submit" class="btn-envoyer">Envoyer le message</button>
+        </form>
+        <p id="confirmation-msg" class="confirmation" hidden></p>
+      </section>
+
+      <footer class="pied-page">
+        <p>© 2026 — Sabri Taoufik</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
